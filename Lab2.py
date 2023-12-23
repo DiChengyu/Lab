@@ -69,7 +69,7 @@ def talker():
         i=i+1
         
     while i>250 and i <=500:
-        msg.data = [-f1,f2,-f3,f4]
+        msg.data = [f1,f2,-f3,-f4]
 
         pid_vx = computepid(vx1)
         pid_vy = computepid(vy1)
@@ -118,6 +118,7 @@ def talker():
         f2=(1/R) * (-vx+vy+w*(ax+ay))
         f3=-(1/R) * (-vx+vy-w*(ax+ay))
         f4=(1/R) * (vx+vy+w*(ax+ay))
+        msg.data = [-f1,-f2,f3,f4]
             
         rospy.loginfo(msg.data)
         rospy.loginfo(i)
