@@ -1,6 +1,6 @@
 ﻿#ifndef CIRCLE__CIRCLE_H_
 #define CIRCLE__CIRCLE_H_
-
+using namespace std;
 #include <iostream>
 #include "rec/robotino/api2/all.h"
 using namespace rec::robotino::api2;
@@ -12,13 +12,13 @@ public:
 	MyCom() : Com() {}
 
 	void errorEvent(const char* errorString) {
-		std::cerr << "Error: " << errorString << std::endl;
+		cerr << "Error: " << errorString << endl;
 	}
 	void connectedEvent() {
-		std::cout << "Connected." << std::endl;
+		cout << "Connected." << endl;
 	}
 	void connectionClosedEvent() {
-		std::cout << "Connection closed." << std::endl;
+		cout << "Connection closed." << endl;
 	}
 };
 
